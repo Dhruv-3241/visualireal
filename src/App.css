@@ -1,0 +1,56 @@
+/* App.css */
+.app-container {
+  display: flex; /* This allows Sidebar and Main content to be side by side */
+  height: 100vh; /* Full viewport height */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.sidebar {
+  flex: 0 0 250px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow-y: auto; 
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2121216d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #577ca3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #55555500;
+}
+
+
+@media (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .main-content {
+    flex: none;
+    width: 100%;
+  }
+}
